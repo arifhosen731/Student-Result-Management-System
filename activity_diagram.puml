@@ -1,0 +1,30 @@
+@startuml
+start
+:Open Student Result Manager;
+:Display main menu;
+:Select menu option;
+if (Add student?) then (yes)
+  :Enter student ID and name;
+  :Check required fields and unique ID;
+  if (ID already exists?) then (yes)
+    :Show validation error;
+  else (no)
+    :Save student record;
+  endif
+elseif (Add course?) then (yes)
+  :Enter course code, title and credit;
+  :Validate required fields and positive credit;
+  :Save course record;
+elseif (Enter / update marks?) then (yes)
+  :Enter student ID, course code and marks;
+  :Validate student, course and mark range;
+  :Calculate grade and grade point;
+  :Save or update marks;
+else (View result)
+  :Find student records;
+  :Calculate credit-weighted CGPA;
+  :Display result sheet;
+endif
+:Return to main menu;
+stop
+@enduml

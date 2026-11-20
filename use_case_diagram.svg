@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <title>Use Case Diagram - Student Result Manager System</title>
+  <desc>Teacher interacts with student, course, marks, grading, CGPA and result sheet functions.</desc>
+  <rect x="0" y="0" width="1200" height="760" fill="#ffffff"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#172554">Use Case Diagram</text>
+
+  <!-- System boundary -->
+  <rect x="300" y="95" width="850" height="610" rx="18" fill="#f8fafc" stroke="#475569" stroke-width="3"/>
+  <text x="725" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#172554">Student Result Manager System</text>
+
+  <!-- Teacher actor -->
+  <circle cx="145" cy="300" r="27" fill="#f1f5f9" stroke="#334155" stroke-width="3"/>
+  <line x1="145" y1="327" x2="145" y2="415" stroke="#334155" stroke-width="3"/>
+  <line x1="95" y1="360" x2="195" y2="360" stroke="#334155" stroke-width="3"/>
+  <line x1="145" y1="415" x2="105" y2="475" stroke="#334155" stroke-width="3"/>
+  <line x1="145" y1="415" x2="185" y2="475" stroke="#334155" stroke-width="3"/>
+  <text x="145" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#0f172a">Teacher</text>
+
+  <!-- Associations from Teacher -->
+  <g stroke="#64748b" stroke-width="2.2" fill="none">
+    <line x1="195" y1="360" x2="365" y2="195"/>
+    <line x1="195" y1="360" x2="365" y2="275"/>
+    <line x1="195" y1="360" x2="365" y2="355"/>
+    <line x1="195" y1="360" x2="365" y2="435"/>
+    <line x1="195" y1="360" x2="365" y2="515"/>
+    <line x1="195" y1="360" x2="365" y2="595"/>
+  </g>
+
+  <!-- Use cases -->
+  <g fill="#eaf2ff" stroke="#2563eb" stroke-width="2.5">
+    <ellipse cx="590" cy="195" rx="225" ry="31"/>
+    <ellipse cx="590" cy="275" rx="225" ry="31"/>
+    <ellipse cx="590" cy="355" rx="225" ry="31"/>
+    <ellipse cx="590" cy="435" rx="225" ry="31"/>
+    <ellipse cx="590" cy="515" rx="225" ry="31"/>
+    <ellipse cx="590" cy="595" rx="225" ry="31"/>
+    <ellipse cx="965" cy="275" rx="155" ry="31"/>
+    <ellipse cx="965" cy="355" rx="155" ry="31"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="19" text-anchor="middle" fill="#0f172a">
+    <text x="590" y="202">Add Student</text>
+    <text x="590" y="282">Add Course</text>
+    <text x="590" y="362">Enter / Update Student Marks</text>
+    <text x="590" y="442">Calculate Letter Grade &amp; Grade Point</text>
+    <text x="590" y="522">Calculate Student CGPA (Credit-Weighted)</text>
+    <text x="590" y="602">Show Student Result Sheet</text>
+    <text x="965" y="282">View All Students</text>
+    <text x="965" y="362">View All Courses</text>
+  </g>
+
+  <!-- Include relationships -->
+  <g stroke="#0f766e" stroke-width="2.2" stroke-dasharray="8 6" fill="none">
+    <line x1="815" y1="355" x2="815" y2="435"/>
+    <line x1="815" y1="595" x2="815" y2="515"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#0f766e" text-anchor="start">
+    <text x="827" y="393">&lt;&lt;include&gt;&gt;</text>
+    <text x="827" y="558">&lt;&lt;include&gt;&gt;</text>
+  </g>
+  <text x="600" y="735" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Dashed arrows indicate included processing steps.</text>
+</svg>

@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+actor Teacher
+rectangle "Student Result Manager" {
+  usecase "Add Student" as UC1
+  usecase "Add Course" as UC2
+  usecase "Enter / Update Student Marks" as UC3
+  usecase "Validate Marks (0-100)" as UC4
+  usecase "Calculate Grade & Grade Point" as UC5
+  usecase "Calculate CGPA" as UC6
+  usecase "View Student Result Sheet" as UC7
+}
+Teacher --> UC1
+Teacher --> UC2
+Teacher --> UC3
+Teacher --> UC7
+UC3 .> UC4 : <<include>>
+UC3 .> UC5 : <<include>>
+UC7 .> UC6 : <<include>>
+@enduml

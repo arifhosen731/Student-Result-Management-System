@@ -1,0 +1,32 @@
+@startuml
+class Student {
+  +student_id: str
+  +name: str
+}
+class Course {
+  +course_code: str
+  +title: str
+  +credit: float
+}
+class StudentResultManager {
+  -students: dict
+  -courses: dict
+  -marks: dict
+  +add_student(student_id, name)
+  +add_course(code, title, credit)
+  +enter_marks(student_id, code, mark)
+  +list_students()
+  +list_courses()
+  +get_result_sheet(student_id)
+}
+class Grading {
+  +calculate_grade(mark)
+}
+class CGPA {
+  +calculate_cgpa(course_results)
+}
+StudentResultManager "1" o-- "*" Student
+StudentResultManager "1" o-- "*" Course
+StudentResultManager ..> Grading
+StudentResultManager ..> CGPA
+@enduml
